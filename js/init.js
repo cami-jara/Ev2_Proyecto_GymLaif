@@ -1,18 +1,18 @@
 window.clientes = [];
 
 window.cargarCliente =()=>{ //Creo cards
-    let cards = document.querySelector(".cards");
+    let cards = document.querySelector(".cards");//Grupo de selectores por cards
     cards.innerHTML="";
     window.clientes.forEach((p)=>{
         let card = document.createElement("div");
         card.classList.add("card","col-md-4","p-1","bg-light");//Creo el card externo
-        let cardHeader = document.createElement("div");
+        let cardHeader = document.createElement("div");//Clase lista para crear componentes de bootstrap
         cardHeader.classList.add("bg-success","text-center","text-white"); //Creo el card header
-        let cardBody = document.createElement("div");
-        let cardFooter = document.createElement("div");
-        cardFooter.classList.add("text-center");//Creo el card footer
+        let cardBody = document.createElement("div");//Creo el cardbody
+        let cardFooter = document.createElement("div");//Creo el card footer
+        cardFooter.classList.add("text-center");
         
-        let nombreCard = document.createElement("h3");
+        let nombreCard = document.createElement("h3");//Creo el h3 interior html
         nombreCard.innerText = p.nombre;
         let tipoCard = document.createElement("h4");
         tipoCard.innerText="Total a Pagar" + "  " + p.tipo;
@@ -21,9 +21,9 @@ window.cargarCliente =()=>{ //Creo cards
         let opcionCard = document.createElement("h6");
 
         if(p.pago === 'efectivo'){
-            pagoCard.style="width=80px";
+            pagoCard.style="width=80px";//Tamaño de anchura
             let imagen = document.createElement("img");//Creo la imagen 
-            imagen.src ='img/efectivo.png';
+            imagen.src ='img/efectivo.png';//Archivo de imagen
             imagen.classList.add("img-fluid");
             pagoCard.appendChild(imagen);
 
@@ -62,7 +62,7 @@ window.cargarCliente =()=>{ //Creo cards
 }
 
 const boton = document.getElementById("agregar-btn");
-boton.addEventListener('click',()=>{
+boton.addEventListener('click',()=>{ //Click para presionar el boton agregar
     let erroresDiv = document.getElementById("errores-div"); 
     erroresDiv.innerHTML ="";
 
