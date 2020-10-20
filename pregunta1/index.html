@@ -37,9 +37,10 @@
                         <div class="form-group mb-3">
                             <label for="tipo-select">Tipo de Plan</label>
                             <select id="tipo-select" class="form-control">
-                                <option value="$14.000">2 veces por semana</option>
+                                <option value="$14.000">2 veces por semana</option>//*El atributo de valor en HTML se usa para especificar el valor del elemento con el que se usa*//
                                 <option value="$17.000">3 veces por semana</option>
                                 <option value="$20.000">Ilimitado</option>
+                                
                             </select>
                         </div>
                         <div class="form-group mb-3">
@@ -87,12 +88,12 @@
 
         var metodo = document.querySelector('.js-switch'); 
         var init = new Switchery(metodo,{
-        color : '#083E2E'
-        ,className: 'switchery'
-        ,secondaryColor:'#1772A0'
-        ,speed: '0.5s'
-        ,size: 'small'
-        ,checkedbox:'true'
+        color : '#083E2E'          //Color principal
+        ,className: 'switchery'    //Nombre de la clase
+        ,secondaryColor:'#1772A0' //Color secundario
+        ,speed: '0.5s'            //Velocidad por segundos
+        ,size: 'small'            //Talla
+        ,checkedbox:'true'        //Checkbox si es verdadero o falso
     });
     
         </script>
