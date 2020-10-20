@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css" integrity="sha384-DhY6onE6f3zzKbjUPRc2hOzGAdEf4/Dz+WJwBvEYL/lkkIsI3ihufq9hk9K4lVoK" crossorigin="anonymous">
+     
+    <!--Switchery-->
+    <link rel="stylesheet" href="css/switchery.css"/>
+    <link rel="stylesheet" href="css/switchery.min.css"/>
+
+
+    <title>Proyecto GymLife VidaSana</title>
+  </head>
+  <body>
+    <header class="bg-dark bg-gradient text-white text-center p-3">
+        <h3>Proyecto GymLife Vida Sana</h3>
+    </header>
+    <main class="container-fluid">
+        <div class="row mt-5">
+            <div class="col-lg-6 mx-auto">
+                <div class="card">
+                    <div class="card-header bg-dark text-center text-white bg-gradient">
+                        <span>Registrar Cliente</span>
+                    </div>
+                    <div class="card-body">
+                        <div id="errores-div">
+
+                        </div>
+                        <div class="form-group mb-3">
+                            <label for="nombre-txt">Nombre del Cliente</label>
+                            <input type="text" id="nombre-txt" class="form-control">
+                        </div>
+                        <div class="form-group mb-3">
+                            <label for="tipo-select">Tipo de Plan</label>
+                            <select id="tipo-select" class="form-control">
+                                <option value="$14.000">2 veces por semana</option>//*El atributo de valor en HTML se usa para especificar el valor del elemento con el que se usa*//
+                                <option value="$17.000">3 veces por semana</option>
+                                <option value="$20.000">Ilimitado</option>
+                                
+                            </select>
+                        </div>
+                        <div class="form-group mb-3">
+                            <label for="pago-select">Medio de Pago</label>
+                            <select id="pago-select" class="form-control">
+                                <option value="efectivo">Efectivo</option>
+                                <option value="tarjeta">Tarjeta</option>
+                            </select>
+                        </div>
+                        <div class="form-group mb-3">
+                            <label for="opcion-switch">Estado de Pago</label>
+                            <input type="checkbox" class="js-switch" id="opcion-switch" checked/>
+                        </div>
+                    </div>           
+                </div>
+                <div class="card-footer">
+                    <button type="button" class="btn btn-block btn btn-success text-white" id="agregar-btn">Agregar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div class="col mx-auto">
+       <table id="clientes-table" class="table table-hover table-bordered">
+           <thead>
+               <tr>
+                   <th>Nombre</th>
+                   <th>Tipo</th>
+                   <th>Medio</th>
+                   <th>Estado</th>
+               </tr>
+           </thead>
+           <tbody>
+
+           </tbody>
+       </table>
+    </div>
+</div>
+    </main>
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+    <script src="js/init.js"></script>
+    <script src="js/switchery.js"></script>
+    <script src="js/switchery.min.js"></script>
+
+    <!-- Option 1: Bootstrap Bundle with Popper.js -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/js/bootstrap.bundle.min.js" integrity="sha384-BOsAfwzjNJHrJ8cZidOg56tcQWfp6y72vEJ8xQ9w6Quywb24iOsW913URv1IS4GD" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper.js and Bootstrap JS-->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/js/bootstrap.min.js" integrity="sha384-5h4UG+6GOuV9qXh6HqOLwZMY4mnLPraeTrjT5v07o347pj6IkfuoASuGBhfDsp3d" crossorigin="anonymous"></script>
+    
+    <script>
+
+        var metodo = document.querySelector('.js-switch'); 
+        var init = new Switchery(metodo,{
+        color : '#083E2E'          //Color principal
+        ,className: 'switchery'    //Nombre de la clase
+        ,secondaryColor:'#1772A0' //Color secundario
+        ,speed: '0.5s'            //Velocidad por segundos
+        ,size: 'small'            //Talla
+        ,checkedbox:'true'        //Checkbox si es verdadero o falso
+    });
+    
+        </script>
+  </body>
+</html>
